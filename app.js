@@ -45,8 +45,6 @@ let z;
 console.log(z, typeof (z));
 
 let x = null;
-console.log(x, typeof(x));
-
-
+console.log(x, typeof (x));
 
 
