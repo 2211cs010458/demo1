@@ -81,6 +81,7 @@ looping statments:-
 - for loop
     synatx: -  for(intitialization ; condition ; updation)
                     {//statements}
+        minimum iteration count is 0
 - while loop
 syntax:- while(condition){//statment}
 - do-while loop
@@ -90,3 +91,10 @@ syntax:- while(condition){//statment}
 which loops are entry controlled loops and exit controled loops?
 entry controlled loops - for loop , while loop
 exit controled loop - do-while loop
+
+
+functions
+-functions are the building blocks of javascript.
+- functions are block of code which is used to execute the specific task
+
+ 
