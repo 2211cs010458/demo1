@@ -51,13 +51,12 @@ for (let i = 1; i <= 5; i++){
 //     i++
 // }
 
-// do while
-// let i = 1;
-// do {
-//     console.log("hello");
-
-    
-// } while (i <= 5);
-
+// ! do-while loop
+// let i=1;
+// do
+// {
+//     i++;
+// console.log("Hello JavaScript");
+// }while(i>=5);
 
 
