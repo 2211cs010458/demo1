@@ -96,5 +96,20 @@ exit controled loop - do-while loop
 functions
 -functions are the building blocks of javascript.
 - functions are block of code which is used to execute the specific task
+- functions can be reusable.
 
- 
+types of functions
+
+1. named functions
+2. anonymus functions : A function which doesnot have a name to execute
+3. function expressions
+4.IIFE(immediate invoke function expression)
+5.arrow functions - it consire the normal function of the syntax
+6.higher order  functions
+7.CALLBACK functions
+
+note current version of js is es14\
+
+es means ECMA Script
+ECMA - european computer manufacturing association
+- es6 function is stable

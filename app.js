@@ -28,7 +28,6 @@ console.log(str2);
 let str3 = `template literals`;
 console.log(str3);
 
-
 let bool1 = true;
 console.log(bool1, typeof(bool1));
 let bool2 = false;
