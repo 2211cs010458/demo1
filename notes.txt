@@ -78,13 +78,15 @@ if-else:-
 
 looping statments:-
 - iterating the block of code multiple times.
-- for loop
+- for loop:-
+-minimum iteration count is "0".
     synatx: -  for(intitialization ; condition ; updation)
                     {//statements}
-        minimum iteration count is 0
 - while loop
+-minimum iteration count is "0".
 syntax:- while(condition){//statment}
 - do-while loop
+-minimum iteration count is "1".
 -sytax :- do{//statments}
             while(condition)
 
@@ -92,24 +94,51 @@ which loops are entry controlled loops and exit controled loops?
 entry controlled loops - for loop , while loop
 exit controled loop - do-while loop
 
+functions:-
+************
+- functions is a building block of javascript.
+- function is a block of code which is used to execute specific task.
+- function is a non-primitive data type.
+- functins can be reusable.
 
-functions
--functions are the building blocks of javascript.
-- functions are block of code which is used to execute the specific task
-- functions can be reusable.
+synatx :-  function function_name(optional parameters,a ){ // function delclaration
+                                //statements
+                                }
+                        function_name(arguments);
 
-types of functions
+types of function:-
+*******************
+1.named function:- function is having a name and invoked(calling) with the same name.
+2.anonymus function:- a function which doesnot have a name for it .
+                    - it cannot be executed by itself.
+3.function expression:- an anonymus function body is assigned as a value to the variable
+                        and same function will be invoked with the same vairable.
+4.IIFE(immidiate invoke function expression):- 
+- once function created immediatley it will called and executed.
+- it can be invoked only ont time.
+5.Arrow function :- it is introduced in es6 feature.
+- it concise the normal function syntax.
+- ()=>{};
+- arrow function is similar to anonymus function.
 
-1. named functions
-2. anonymus functions : A function which doesnot have a name to execute
-3. function expressions
-4.IIFE(immediate invoke function expression)
-5.arrow functions - it consire the normal function of the syntax
-6.higher order  functions
-7.CALLBACK functions
+6.Higher order function :- 
+-higher order function is a function which accepts another function as an arguments/values.
 
-note current version of js is es14\
+7.callback function:-
+- callback function is a function which is passed as a argument to another function.
 
-es means ECMA Script
-ECMA - european computer manufacturing association
-- es6 function is stable
+
+
+Note:- current version of javascript is es14.
+es - ECMA script .
+ECMA - european computer manufacturing association.
+- es6 feature is stable.
+
+explicit return :- explicitly we have to give a keyword called as "return".
+explciit return is possible in both normal function as well as arrow function.
+implicit return:- implicitly(by default) arrow function will take return.
+note:- no printing statements will work after "return" statement.
+
+closure:-closure is a memory created when functions are bundled together/
+nested each other by giving accessibility to the innermost function to access
+the variables of outermost function.

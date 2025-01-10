@@ -102,3 +102,14 @@ let z = (a, b) => {
 }
 
 console.log(z(300, 100));
+
+function x(){
+    var user = "Vasanth";
+    let company = "Google";
+    const sal = 1234567890;
+    console.log(user);
+    console.log(company);
+    console.log(sal);
+    console.log(a , b);
+}
+x();
