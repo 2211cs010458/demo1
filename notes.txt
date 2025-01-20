@@ -142,3 +142,18 @@ note:- no printing statements will work after "return" statement.
 closure:-closure is a memory created when functions are bundled together/
 nested each other by giving accessibility to the innermost function to access
 the variables of outermost function.
+
+Arrays:
+- its a non primitive datatypes
+
+
+create array of objects:
+---------------------------
+
+what is an objects ?
+object is an entity which contains states and behaviors
+
+- states means properties, behaviors means functionality.
+- object is an entity to store the values in the form of key and value pairs.
+
+Syntax :-
