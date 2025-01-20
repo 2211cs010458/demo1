@@ -143,17 +143,34 @@ closure:-closure is a memory created when functions are bundled together/
 nested each other by giving accessibility to the innermost function to access
 the variables of outermost function.
 
-Arrays:
-- its a non primitive datatypes
+Arrays :-
+- it is a non-primitive data type.
+- Array is used to store multiple values within a single variable.
+
+syantx :-  [];
+
+what is the difference between map and forEach method.
+map() :- it is used to iterate the values.
+        - it returns new copied array from the original array.
+
+forEach() :- it is used to iterate the values.
+          - it returns "undefined".
+
+create array of objects
+*************************
 
 
-create array of objects:
----------------------------
 
-what is an objects ?
-object is an entity which contains states and behaviors
+what is object?
+- Object is an entity which contains states and behaviors.
+-states - properties , behaviour - functionality.
+- Object is an entity to store the values in the form key and value pair.
 
-- states means properties, behaviors means functionality.
-- object is an entity to store the values in the form of key and value pairs.
+synatax :-   let obj = {};
+ex :-   let userdetails ={
+        name:"Sam",
+        age:23
+        }
 
-Syntax :-
+Note: - Javascript is mainly object -based language till 2015 (es6) 
+- after es6 feature they added oops concept.
