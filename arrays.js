@@ -89,26 +89,40 @@ console.log(x);
 // console.log(user1.name);
 // console.log(user2.name);
 
-let userDetails =[
-    {
-        name:"sathvik",
-        city:"Karimnagar"
-    },
-    {
-        name:"Raghu",
-        city:"ananthpur"
-    },
-    {
-        name:"Shilpa",
-        city:"Kammam"
-    },
-    {
-        name:"Bharath",
-        city:"Sathupalli"
-    }
-];
+// let userDetails =[
+//     {
+//         name:"sathvik",
+//         city:"Karimnagar"
+//     },
+//     {
+//         name:"Raghu",
+//         city:"ananthpur"
+//     },
+//     {
+//         name:"Shilpa",
+//         city:"Kammam"
+//     },
+//     {
+//         name:"Bharath",
+//         city:"Sathupalli"
+//     }
+// ];
 
-userDetails.map((user)=>{
-console.log(user.name);
-})
+// userDetails.map((user)=>{
+// console.log(user.name);
+// })
 
+let userData = {
+    name: "Akshay",
+    age: 22,
+    city:"Siddipet"
+}
+console.log(userData);
+
+let Y = JSON.stringify(userData);
+
+console.log(Y);
+let z = JSON.parse(Y);
+
+console.log(z);
+    
