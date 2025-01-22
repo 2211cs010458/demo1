@@ -219,6 +219,14 @@ synatx :-  setInterval(callbackfn , timeout);
         1.pending state
         2.fulfilled state
         3.rejected state
+Syntax: Let x = new Promise (resolve and reject
+
+to execute promise we have instance methods:-
+   then():- it is a promise used to execute success or fUlfilled state  results
+
+   catch():- it is used to execute the rejected state results
+
+   finally():- it is used to execute the final state results
 
 4.async & await
 
