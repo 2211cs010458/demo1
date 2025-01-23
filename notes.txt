@@ -159,8 +159,6 @@ forEach() :- it is used to iterate the values.
 create array of objects
 *************************
 
-
-
 what is object?
 - Object is an entity which contains states and behaviors.
 -states - properties , behaviour - functionality.
@@ -231,3 +229,39 @@ to execute promise we have instance methods:-
 4.async & await
 
 note:- javscript is by default "Synchronous(single threaded)".
+4.async & await :-
+async :- async keyword converts synchronus function into asynchronous function and starts the promise.
+
+await :- await keyword make the function to wait until promise completes.
+
+note:- await keyword always used along with async keyword.
+
+note:- javscript is by default "Synchronous(single threaded)".
+
+Create - POST
+Read - GET
+update - PUT
+Delete - Delete
+
+DOM :-
+******
+- DOM stands document object model.
+- DOM is a web api used to manipulate the html content.
+- DOM is used to add , remove ,update the content in the html document.
+
+DOM Methods:-
+*************
+1.document.getElementById("demo"):- it is used to select html element based on "id attribute" value.
+                              - with id attribute we can select only one element(unique element).
+
+2.document.getElementsByClassName("test"):-it is used to select html element based on "class attribute" value.
+                                      - with class attribute we can select multiple elements.
+
+3.document.getElementsByTagName(""):- it is used to select html elements based on their tag names.
+
+4.document.getelementsByName(""):- it is used to select the html elements based on "name attribute".
+
+
+- below methods used to select html elements based on "css selectors".
+5.document.querySelector("#id"):- this method is used to select only one element.
+6.document.querySelectorAll(".class"):- this method is used to select multiple elements.
