@@ -143,6 +143,8 @@ closure:-closure is a memory created when functions are bundled together/
 nested each other by giving accessibility to the innermost function to access
 the variables of outermost function.
 
+
+
 Arrays :-
 - it is a non-primitive data type.
 - Array is used to store multiple values within a single variable.
@@ -158,6 +160,8 @@ forEach() :- it is used to iterate the values.
 
 create array of objects
 *************************
+
+
 
 what is object?
 - Object is an entity which contains states and behaviors.
@@ -217,18 +221,14 @@ synatx :-  setInterval(callbackfn , timeout);
         1.pending state
         2.fulfilled state
         3.rejected state
-Syntax: Let x = new Promise (resolve and reject
 
-to execute promise we have instance methods:-
-   then():- it is a promise used to execute success or fUlfilled state  results
+syntax :-    let x = new Promise((resolve , reject)=>{});
 
-   catch():- it is used to execute the rejected state results
+        to execute the promise we have instance methods:-
+                1.then() :- it is used to execute success or fulfilled state results.
+                2.catch() :- it is used to execute rejected state results.
+                3.finally() :- once promise is settled it will print for both success/failures
 
-   finally():- it is used to execute the final state results
-
-4.async & await
-
-note:- javscript is by default "Synchronous(single threaded)".
 4.async & await :-
 async :- async keyword converts synchronus function into asynchronous function and starts the promise.
 
@@ -242,6 +242,7 @@ Create - POST
 Read - GET
 update - PUT
 Delete - Delete
+
 
 DOM :-
 ******
@@ -265,3 +266,15 @@ DOM Methods:-
 - below methods used to select html elements based on "css selectors".
 5.document.querySelector("#id"):- this method is used to select only one element.
 6.document.querySelectorAll(".class"):- this method is used to select multiple elements.
+
+
+Events in DOM:-
+***************
+-events are nothing but an actions performed on the html element.
+-in dom , we have events like click events , mouse events and key events.
+
+click evenets :- onclick , ondblclick , onsubmit , onchange .
+
+mouse events :- mouseover , mouseleave
+
+key events :- keydown , keyup , keypress(deprocated).
