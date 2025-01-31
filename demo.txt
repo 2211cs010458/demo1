@@ -1,1 +1,5 @@
 hello-world
+
+take array of objects where each object contains emp id, emp name,emp company,emp salary,and emp address
+ where emp address further contains an object which includes two properties such as emp city, area.
+ display all this employee datas on tne ui through java script.
