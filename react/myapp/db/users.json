@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Ram",
+      "email": "Ram@example.com",
+      "password": "password123"
+    },
+    {
+      "id": "2",
+      "name": "Sachin",
+      "email": "sachin23@example.com",
+      "password": "secret123"
+    },
+    {
+      "id": "2",
+      "name": "yogesh",
+      "email": "yogesh34@example.com",
+      "password": "3456"
+    },
+    {
+      "id": "d942",
+      "name": "Aravind P",
+      "email": "2211cs010458@mallareddyuniversity.ac.in",
+      "phone": "8519881965"
+    }
+  ]
+}
