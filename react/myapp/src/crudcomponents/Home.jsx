@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import "./home.css";
+import "./Home.css";
 
 import axios from 'axios';
 import { Link } from 'react-router-dom';
@@ -63,7 +63,9 @@ const Home = () => {
                                     <td>{user.email}</td>
                                     <td>{user.phone}</td>
                                     <td>
-                                        <Link to={`/edit/${user.id}`}>Edit</Link>
+                                        <Link to={`/edit/${user.id}`}>
+                                            <button className='edit-btn'>edit</button>
+                                        </Link>
                                         <button onClick={()=>deleteUser(user.id)}>Delete</button>
                                     </td>
                                 </tr>

@@ -1,28 +1,46 @@
 {
   "users": [
     {
-      "id": "1",
       "name": "Ram",
       "email": "Ram@example.com",
-      "password": "password123"
+      "phone": "2345678902",
+      "id": "1"
     },
     {
       "id": "2",
       "name": "Sachin",
       "email": "sachin23@example.com",
-      "password": "secret123"
+      "phone": "87654345678"
     },
     {
-      "id": "2",
+      "id": "3",
       "name": "yogesh",
       "email": "yogesh34@example.com",
-      "password": "3456"
+      "phone": "654789922"
     },
     {
       "id": "d942",
       "name": "Aravind P",
       "email": "2211cs010458@mallareddyuniversity.ac.in",
       "phone": "8519881965"
+    },
+    {
+      "id": "f345",
+      "name": "ram",
+      "email": "ram@gmail.com",
+      "phone": "3456789034"
+    },
+    {
+      "id": "440a",
+      "name": "Raj",
+      "email": "raj45@gmail.com",
+      "phone": "456783902"
+    },
+    {
+      "id": "c86c",
+      "name": "Sachin",
+      "email": "Sachin@gmail.com",
+      "phone": "971234567"
     }
   ]
 }

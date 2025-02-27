@@ -38,24 +38,25 @@
 
 
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './components/crudcomponents/Home';
-import Create from './components/crudcomponents/Create';
-import Edit from './components/crudcomponents/Edit';
-import { ToastContainer } from 'react-toastify';
-// import 'react-toastify/dist/ReactToastify.css'; // Ensure Toastify styles are included
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from './crudcomponents/Home';
+import Edit from './crudcomponents/Edit';
+import Create from './crudcomponents/Create';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";  // Import Toast styles
 
 const App = () => {
-  return (
-    <BrowserRouter>
-      <ToastContainer />
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/create' element={<Create />} />
-        <Route path='/edit/:userId' element={<Edit />} />
-      </Routes>
-    </BrowserRouter>
-  );
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path='/' element={<Home />} />
+                <Route path='/create' element={<Create />} />  
+                <Route path='/edit/:id' element={<Edit />} />  
+            </Routes>
+
+            <ToastContainer position="top-center" autoClose={3000} />
+        </BrowserRouter>
+    );
 };
 
 export default App;

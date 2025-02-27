@@ -1,73 +1,77 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
-import "./create.css";
+import axios from "axios";
+import { useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
-
+import "react-toastify/dist/ReactToastify.css"; 
+import "./create.css";
 const Edit = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
+    const { id } = useParams(); 
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [phone, setPhone] = useState("");
+    const navigate = useNavigate();
 
-  const navigate = useNavigate();
+    useEffect(() => {
+        axios.get(`http://localhost:8000/users/${id}`)
+            .then(response => {
+                setName(response.data.name);
+                setEmail(response.data.email);
+                setPhone(response.data.phone);
+            })
+            .catch(error => {
+                console.error("Error fetching user:", error);
+                toast.error("Failed to fetch user details!");
+            });
+    }, [id]);
 
-  const data = useParams();
-  // console.log(data);
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        axios.put(`http://localhost:8000/users/${id}`, { name, email, phone })
+            .then(() => {
+                toast.success("User updated successfully!");  
+                navigate("/"); 
+            })
+            .catch(error => {
+                console.error("Error updating user:", error);
+                toast.error("Failed to update user!");  
+            });
+    };
 
-  // !read /populate the exisiting individual user data
-  useEffect(()=>{
-    axios.get("http://localhost:8000/users/"+data.userId)
-    .then(res=>{
-      // console.log(res);
-      setName(res.data.name);
-      setEmail(res.data.email);
-      setPhone(res.data.phone)
-    }).catch(err=>console.log(err))
-  },)
+    return (
+        <div className="create-container">
+            <h2 className="create-title">Edit User</h2>
+            <form onSubmit={handleSubmit} className="create-form">
+                <input
+                    type="text"
+                    placeholder="Name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    className="edit-input"
+                /><br/>
 
-  let handleSubmit = (e) => {
-    e.preventDefault();
-    let payload = { name, email, phone };
-    // console.log(payload);
-    axios.put("http://localhost:8000/users/"+data.userId , payload)
-    .then(res=>{
-      toast.success("user updated successfully");
-      navigate("/");
-    }).catch(err=>toast.error("user not updated"))
-    
-  };
-  return (
-    <div className="formBlock">
-      <h1>Update User</h1>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="username"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-        <br />
-        <input
-          type="email"
-          placeholder="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <br />
-        <input
-          type="tel"
-          placeholder="phone number"
-          maxLength={10}
-          value={phone}
-          onChange={(e) => setPhone(e.target.value)}
-        />
-        <br />
+                <input
+                    type="email"
+                    placeholder="Email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="edit-input"
+                /><br/>
 
-        <input type="submit" value="Update User" />
-        <Link to="/">Back to Home page</Link>
-      </form>
-    </div>
-  );
+                <input
+                    type="text"
+                    placeholder="Phone"
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
+                    className="edit-input"
+                    maxLength={10}
+                /><br/>
+
+                <button type="submit" className="create-submit-btn">Update</button>
+            </form><br/>
+
+            <button onClick={() => navigate('/')} className="return-home-btn">Return to Home</button>
+        </div>
+    );
 };
 
 export default Edit;
