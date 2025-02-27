@@ -1,0 +1,19 @@
+
+
+Spring Boot:
+ ---it is an open source frame work which is built on top of the spring frame work
+
+ --- with the help of the spring boot we can develop a production  ready application or 
+ web applications with minimum configuration
+
+ MVC:
+ --- IT FOLLOWS THE MVC architecture pattern to develop web applications
+ MVC means Model View Controller
+
+
+Ecart:
+
+--- AWS s3 bucket
+--- MYSQL
+--- Spring Boot
+--- ReactJs 
