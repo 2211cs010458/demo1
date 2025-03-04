@@ -1,0 +1,11 @@
+modules:
+-----------------------
+modules is just a file which contains javascript related codes which can be shared between export and import
+
+it is divided into two modules
+ 1,common js modules(server)
+ 2. ES6 Modules (clients)
+    2.1 default export
+    2.2 named export
+
+    2.1: 

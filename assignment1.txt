@@ -1,0 +1,76 @@
+Give me some idea on what is a Data type. What are Primitive Data types and Non-Primitive Data types. Explain with some examples.
+
+Ans : 
+Data Types: 
+
+    --> It is used to define what kind of data is used in the variable.
+
+(i) Primitive: Number, String, Boolean, Undefined, null, Symbol, bigInt.
+
+    --> Primitive data types are immutable.
+    --> It can have only single value.
+
+-- Primitive Data Type Examples --
+
+1.Number
+Integers,float,decimal,exponential etc
+Ex: 
+let z = 2; 
+Ex:
+console.log(z);
+
+2.String
+Sequence of characters stored within double quotes/single quotes, backticks
+Ex: 
+var userName="Aravind”;
+console.log(userName);
+
+3.boolean
+True/false
+Ex: 
+let y = true;
+console.log(y);
+
+4.undefined
+Variable is defined but not initialised.
+Ex: 
+let a;
+console.log(a);
+
+5.null
+Null is the absence of object or empty space
+Ex:
+let b = null;
+console.log(b);
+
+
+(ii) Non Primitive: class, objects, functions, Array, sets, map.
+
+    --> Non primitive data types are mutable.
+    --> It have multiple values.
+
+-- Non-Primitive Data Type Examples --
+
+1. Class:
+A blueprint for creating objects with predefined properties and methods.
+
+2.Object:
+A collection of key-value pairs.
+Ex:
+let name = {
+  name: "Aravind",
+  age: 20
+};
+
+3.Functions
+A reusable block of code that can be executed when called.
+Ex:
+function greet(name) {
+  return Hi, ${name}!;
+}
+
+4. Arrays
+An ordered list of elements (can be of different types).
+Ex:
+let cars = ["Mercedes Benz", "Ferari", "Audi"];
+

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Employee details</h1>
+    <table id="employeeTable" border=" 2px" cellpadding="10px" cellspacing="0">
+        <tr>
+            <th>emp id</th>
+            <th>emp name</th>
+            <th>emp company</th>
+            <th>emp salary</th>
+            <th>emp address</th>
+        </tr>
+        <tbody id="store">
+
+        </tbody>
+
+
+
+
+    </table>
+    <script>
+        const employees = [
+            {
+                emp_id: 1,
+                emp_name: "Aravind",
+                emp_company: "ABC company",
+                emp_salary: "50000",
+                emp_address: {
+                    emp_city: "hyd",
+                    emp_area: "kukatpally"
+                }
+            },
+            {
+                emp_id: 2,
+                emp_name: "Ram",
+                emp_company: "123",
+                emp_salary: "60000",
+                emp_address: {
+                    emp_city: "hyd",
+                    emp_area: "moosapet"
+                }
+            },
+            {
+                emp_id: 3,
+                emp_name: "Adi",
+                emp_company: "ABC company",
+                emp_salary: "50000",
+                emp_address: {
+                    emp_city: "hyd",
+                    emp_area: "kukatpally"
+                }
+            },
+            {
+                emp_id: 4,
+                emp_name: "Harsha",
+                emp_company: "123",
+                emp_salary: "60000",
+                emp_address: {
+                    emp_city: "hyd",
+                    emp_area: "moosapet"
+                }
+            },
+            {
+                emp_id: 5,
+                emp_name: "akshay",
+                emp_company: "123",
+                emp_salary: "60000",
+                emp_address: {
+                    emp_city: "hyd",
+                    emp_area: "moosapet"
+                }
+            },
+        ];
+
+        function displayEmployees() {
+            const tableBody = document.getElementById("employeeTable").getElementsByTagName("tbody")[0];
+            employees.forEach(employee => {
+                const row = document.createElement("tr");
+                const cell1 = document.createElement("td");
+                cell1.textContent = employee.emp_id;
+                row.appendChild(cell1);
+
+                const cell2 = document.createElement("td");
+                cell2.textContent = employee.emp_name;
+                row.appendChild(cell2);
+
+                const cell3 = document.createElement("td");
+                cell3.textContent = employee.emp_company;
+                row.appendChild(cell3);
+
+                const cell4 = document.createElement("td");
+                cell4.textContent = employee.emp_salary;
+                row.appendChild(cell4);
+
+                const cell5 = document.createElement("td");
+                cell5.textContent = employee.emp_address.emp_city;
+                row.appendChild(cell5);
+
+                const cell6 = document.createElement("td");
+                cell6.textContent = employee.emp_address.emp_area;
+                row.appendChild(cell6);
+
+                tableBody.appendChild(row);
+            });
+        }
+
+        window.onload = displayEmployees;
+
+    </script>
+</body>
+
+</html>

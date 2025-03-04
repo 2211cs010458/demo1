@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+
+        .container {
+            display: flex;
+            width: 300;
+            justify-content: space-around;
+            align-items: center;
+            background-color: rgb(0, 221, 255);
+
+        }
+
+
+        #left {
+            width: 300px;
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            text-align: center;
+
+            border: 2px solid black;
+        }
+
+        .items {
+            width: 50%;
+            height: 50px;
+            background-color: rgb(0, 255, 42);
+            margin: 5px;
+            cursor: move;
+            object-fit: cover;
+            text-align: space-around;
+            text-wrap: align-items;
+        }
+
+        #right {
+            container: auto center;
+            width: 300px;
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            border: 2px solid black;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="left">
+            <div class="items" draggable="true">item1</div>
+            <div class="items" draggable="true">item2</div>
+            <div class="items" draggable="true">item3</div>
+            <div class="items" draggable="true">item4</div>
+        </div>
+        <div id="right">
+
+        </div>
+    </div>
+    <script>
+        let items = document.querySelectorAll(".items");
+        let left = document.getElementById("left");
+        let right = document.getElementById("right");
+        // console.log(items);
+        [...items].map(element => {
+            // console.log(element);
+            element.addEventListener("dragstart", (event) => {
+                // console.log(event.target);
+                let selected = event.target;
+
+                //! right container
+
+                right.addEventListener("dragover", event => {
+                    event.preventDefault();
+                })
+                right.addEventListener("drop", () => {
+                    // console.log(selected);
+                    right.appendChild(selected);
+                    selected = null;
+                });
+                //! left container
+
+                left.addEventListener("dragover", event => {
+                    event.preventDefault();
+                })
+                left.addEventListener("drop", () => {
+                    left.appendChild(selected);
+                    selected = null;
+                })
+            })
+        })
+    </script>
+</body>
+
+</html>
