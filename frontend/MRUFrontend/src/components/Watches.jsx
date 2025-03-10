@@ -18,7 +18,7 @@ const Watches = ()=>{
         <>
         <h1>Available Watches</h1>
             <div className="parent">
-                {watches.map((element,index)=>{
+                {watches.map((element)=>{
                     return(
                         <div className="child">
                             <h2>{element.watch1}</h2>
